@@ -1,10 +1,10 @@
 <?php
 
-namespace Laralib\L5scaffold\Migrations;
+namespace janareit\L5scaffold\Migrations;
 
 /**
  * Class SchemaParser with modifications by Fernando
- * @package Laralib\L5scaffold\Migrations
+ * @package janareit\L5scaffold\Migrations
  * @author Jeffrey Way <jeffrey@jeffrey-way.com>
  */
 class SchemaParser

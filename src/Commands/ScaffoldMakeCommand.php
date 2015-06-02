@@ -1,18 +1,18 @@
 <?php
 
-namespace Laralib\L5scaffold\Commands;
+namespace janareit\L5scaffold\Commands;
 
 use Illuminate\Console\AppNamespaceDetectorTrait;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Composer;
-use Laralib\L5scaffold\Makes\MakeController;
-use Laralib\L5scaffold\Makes\MakeLayout;
-use Laralib\L5scaffold\Makes\MakeMigration;
-use Laralib\L5scaffold\Makes\MakeModel;
-use Laralib\L5scaffold\Makes\MakerTrait;
-use Laralib\L5scaffold\Makes\MakeSeed;
-use Laralib\L5scaffold\Makes\MakeView;
+use janareit\L5scaffold\Makes\MakeController;
+use janareit\L5scaffold\Makes\MakeLayout;
+use janareit\L5scaffold\Makes\MakeMigration;
+use janareit\L5scaffold\Makes\MakeModel;
+use janareit\L5scaffold\Makes\MakerTrait;
+use janareit\L5scaffold\Makes\MakeSeed;
+use janareit\L5scaffold\Makes\MakeView;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
