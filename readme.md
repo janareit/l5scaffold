@@ -1,7 +1,7 @@
 # Laravel 5 Scaffold Generator
 
 
-Hi, this is a scaffold generator for Laravel 5.
+Hi, this is a scaffold generator for Laravel 5.0.x.
 
 
 
@@ -10,7 +10,7 @@ Hi, this is a scaffold generator for Laravel 5.
 ### Step 1: Install Through Composer
 
 ```
-composer require 'laralib/l5scaffold' --dev
+composer require 'janareit/l5scaffold' --dev
 ```
 
 ### Step 2: Add the Service Provider
@@ -18,7 +18,7 @@ composer require 'laralib/l5scaffold' --dev
 Open `config/app.php` and, to your **providers** array at the bottom, add:
 
 ```
-"Laralib\L5scaffold\GeneratorsServiceProvider"
+"janareit\L5scaffold\GeneratorsServiceProvider"
 ```
 
 ### Step 3: Run Artisan!
