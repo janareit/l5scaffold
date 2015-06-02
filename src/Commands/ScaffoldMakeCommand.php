@@ -96,7 +96,7 @@ class ScaffoldMakeCommand extends Command
         $this->makeSeed();
         $this->makeModel();
         $this->makeController();
-        $this->makeViewLayout();
+        //$this->makeViewLayout();
         $this->makeViews();
 
 
@@ -187,6 +187,7 @@ class ScaffoldMakeCommand extends Command
         $this->composer->dumpAutoloads();
 
         $this->info('Route::resource("'.$this->getObjName("names").'","'.$this->getObjName("Name").'Controller"); // Add this line in routes.php');
+        $this->info('Add Route-Model binding and "use" clause to RouteServiceProvider.php');
 
     }
 

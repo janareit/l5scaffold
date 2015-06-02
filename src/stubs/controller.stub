@@ -36,73 +36,68 @@ class {{class}} extends Controller {
 	 * @param Request $request
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(Request $request, {{model_name_class}} ${{model_name_var_sgl}})
 	{
-		${{model_name_var_sgl}} = new {{model_name_class}}();
-
 		{{model_fields}}
 
 		${{model_name_var_sgl}}->save();
 
-		return redirect()->route('{{model_name_var}}.index')->with('message', 'Item created successfully.');
+        flash()->success('{{model_name_class}} created successfully!');
+		return redirect()->route('{{model_name_var}}.index');
 	}
 
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  ${{model_name_var_sgl}}
 	 * @return Response
 	 */
-	public function show($id)
+	public function show({{model_name_class}} ${{model_name_var_sgl}})
 	{
-		${{model_name_var_sgl}} = {{model_name_class}}::findOrFail($id);
-
 		return view('{{model_name_var}}.show', compact('{{model_name_var_sgl}}'));
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  ${{model_name_var_sgl}}
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit({{model_name_class}} ${{model_name_var_sgl}})
 	{
-		${{model_name_var_sgl}} = {{model_name_class}}::findOrFail($id);
-
 		return view('{{model_name_var}}.edit', compact('{{model_name_var_sgl}}'));
 	}
 
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  ${{model_name_var_sgl}}
 	 * @param Request $request
 	 * @return Response
 	 */
-	public function update(Request $request, $id)
+	public function update(Request $request, {{model_name_class}} ${{model_name_var_sgl}})
 	{
-		${{model_name_var_sgl}} = {{model_name_class}}::findOrFail($id);
 
 		{{model_fields}}
 
 		${{model_name_var_sgl}}->save();
 
-		return redirect()->route('{{model_name_var}}.index')->with('message', 'Item updated successfully.');
+        flash()->success('{{model_name_class}} updated successfully!');
+		return redirect()->route('{{model_name_var}}.index');
 	}
 
 	/**
 	 * Remove the specified resource from storage.
 	 *
-	 * @param  int  $id
+	 * @param  ${{model_name_var_sgl}}
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy({{model_name_class}} ${{model_name_var_sgl}})
 	{
-		${{model_name_var_sgl}} = {{model_name_class}}::findOrFail($id);
 		${{model_name_var_sgl}}->delete();
 
-		return redirect()->route('{{model_name_var}}.index')->with('message', 'Item deleted successfully.');
+        flash()->success('{{model_name_class}} deleted successfully!');
+		return redirect()->route('{{model_name_var}}.index');
 	}
 
 }

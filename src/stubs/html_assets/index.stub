@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('app')
 
 @section('content')
     <div class="page-header">
@@ -25,9 +25,24 @@
                     {{content_fields}}
 
                     <td class="text-right">
-                        <a class="btn btn-primary" href="{{ route('{{class}}.show', ${{classSingle}}->id) }}">View</a>
-                        <a class="btn btn-warning " href="{{ route('{{class}}.edit', ${{classSingle}}->id) }}">Edit</a>
-                        <form action="{{ route('{{class}}.destroy', ${{classSingle}}->id) }}" method="POST" style="display: inline;" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };"><input type="hidden" name="_method" value="DELETE"><input type="hidden" name="_token" value="{{ csrf_token() }}"> <button class="btn btn-danger" type="submit">Delete</button></form>
+                        <a class="btn btn-primary btn-sm radius tableaction"
+                           href="{{ route('{{class}}.show', ${{classSingle}}->id) }}">
+                            <span class="fa fa-eye"></span>
+                        </a>
+                        <a class="btn btn-success btn-sm radius tableaction"
+                           href="{{ route('{{class}}.edit', ${{classSingle}}->id) }}">
+                            <span class="fa fa-pencil"></span>
+                        </a>
+                        <form action="{{ route('{{class}}.destroy', ${{classSingle}}->id) }}"
+                            method="POST"
+                            style="display: inline;"
+                            onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <button class="btn btn-danger btn-sm radius tableaction" type="submit">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </form>
                     </td>
                 </tr>
 

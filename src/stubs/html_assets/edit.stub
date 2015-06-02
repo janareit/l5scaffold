@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('app')
 
 @section('content')
     <div class="page-header">
@@ -22,7 +22,7 @@
 
 
             <a class="btn btn-default" href="{{ route('{{class}}.index') }}">Back</a>
-            <button class="btn btn-primary" type="submit" >Save</a>
+            <button class="btn btn-primary" type="submit" >Save</button>
             </form>
         </div>
     </div>
