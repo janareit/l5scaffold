@@ -1,5 +1,5 @@
 <?php
-namespace Laralib\L5scaffold\Makes;
+namespace janareit\L5scaffold\Makes;
 
 use Illuminate\Console\AppNamespaceDetectorTrait;
 use Illuminate\Filesystem\Filesystem;

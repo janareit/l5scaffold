@@ -6,7 +6,7 @@
  * Time: 11:49 PM
  */
 
-namespace Laralib\L5scaffold\Makes;
+namespace janareit\L5scaffold\Makes;
 
 
 use Illuminate\Filesystem\Filesystem;

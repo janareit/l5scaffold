@@ -1,6 +1,6 @@
 <?php
 
-namespace Laralib\L5scaffold;
+namespace janareit\L5scaffold;
 
 use Illuminate\Support\ServiceProvider;
 

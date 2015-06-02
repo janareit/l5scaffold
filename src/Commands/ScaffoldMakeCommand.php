@@ -1,6 +1,6 @@
 <?php
 
-namespace Laralib\L5scaffold\Commands;
+namespace janareit\L5scaffold\Commands;
 
 use Illuminate\Console\AppNamespaceDetectorTrait;
 use Illuminate\Console\Command;

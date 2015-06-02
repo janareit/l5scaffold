@@ -6,7 +6,7 @@
  * Time: 5:00 PM
  */
 
-namespace Laralib\L5scaffold\Makes;
+namespace janareit\L5scaffold\Makes;
 
 
 
