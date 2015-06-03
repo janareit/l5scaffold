@@ -32,8 +32,8 @@ class MakeModel {
 
         if (! $this->files->exists($modelPath)) {
             $this->scaffoldCommandObj->call('make:model', [
-                'name' => $name,
-                '--no-migration' => true
+                'name' => config('scaffold.models_command_path') . $this->getPrefix('model') . $name,
+                '--no-migration' => true,
             ]);
         }
 

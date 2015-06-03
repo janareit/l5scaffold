@@ -17,7 +17,7 @@ class {{class}} extends Controller {
 	{
 		${{model_name_var}} = {{model_name_class}}::all();
 
-		return view('{{model_name_var}}.index', compact('{{model_name_var}}'));
+		return view('{{model_prefix}}{{model_name_var}}.index', compact('{{model_name_var}}'));
 	}
 
 	/**
@@ -27,7 +27,7 @@ class {{class}} extends Controller {
 	 */
 	public function create()
 	{
-		return view('{{model_name_var}}.create');
+		return view('{{model_prefix}}{{model_name_var}}.create');
 	}
 
 	/**
@@ -43,7 +43,7 @@ class {{class}} extends Controller {
 		${{model_name_var_sgl}}->save();
 
         flash()->success('{{model_name_class}} created successfully!');
-		return redirect()->route('{{model_name_var}}.index');
+		return redirect()->route('{{model_prefix}}{{model_name_var}}.index');
 	}
 
 	/**
@@ -54,7 +54,7 @@ class {{class}} extends Controller {
 	 */
 	public function show({{model_name_class}} ${{model_name_var_sgl}})
 	{
-		return view('{{model_name_var}}.show', compact('{{model_name_var_sgl}}'));
+		return view('{{model_prefix}}{{model_name_var}}.show', compact('{{model_name_var_sgl}}'));
 	}
 
 	/**
@@ -65,7 +65,7 @@ class {{class}} extends Controller {
 	 */
 	public function edit({{model_name_class}} ${{model_name_var_sgl}})
 	{
-		return view('{{model_name_var}}.edit', compact('{{model_name_var_sgl}}'));
+		return view('{{model_prefix}}{{model_name_var}}.edit', compact('{{model_name_var_sgl}}'));
 	}
 
 	/**
@@ -83,7 +83,7 @@ class {{class}} extends Controller {
 		${{model_name_var_sgl}}->save();
 
         flash()->success('{{model_name_class}} updated successfully!');
-		return redirect()->route('{{model_name_var}}.index');
+		return redirect()->route('{{model_prefix}}{{model_name_var}}.index');
 	}
 
 	/**
@@ -97,7 +97,7 @@ class {{class}} extends Controller {
 		${{model_name_var_sgl}}->delete();
 
         flash()->success('{{model_name_class}} deleted successfully!');
-		return redirect()->route('{{model_name_var}}.index');
+		return redirect()->route('{{model_prefix}}{{model_name_var}}.index');
 	}
 
 }

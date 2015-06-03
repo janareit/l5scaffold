@@ -115,9 +115,13 @@ class MakeView
      */
     protected function replaceName(&$stub)
     {
+
         $stub = str_replace('{{Class}}', $this->scaffoldCommandObj->getObjName('Names'), $stub);
         $stub = str_replace('{{class}}', $this->scaffoldCommandObj->getObjName('names'), $stub);
         $stub = str_replace('{{classSingle}}', $this->scaffoldCommandObj->getObjName('name'), $stub);
+
+        $prefix = strtolower( str_replace('/', '.', $this->getPrefix('model')) );
+        $stub = str_replace('{{prefix}}', $prefix, $stub);
 
         return $this;
     }

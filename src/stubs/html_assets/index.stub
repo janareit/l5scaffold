@@ -26,14 +26,14 @@
 
                     <td class="text-right">
                         <a class="btn btn-primary btn-sm radius tableaction"
-                           href="{{ route('{{class}}.show', ${{classSingle}}->id) }}">
+                           href="{{ route('{{prefix}}{{class}}.show', ${{classSingle}}->id) }}">
                             <span class="fa fa-eye"></span>
                         </a>
                         <a class="btn btn-success btn-sm radius tableaction"
-                           href="{{ route('{{class}}.edit', ${{classSingle}}->id) }}">
+                           href="{{ route('{{prefix}}{{class}}.edit', ${{classSingle}}->id) }}">
                             <span class="fa fa-pencil"></span>
                         </a>
-                        <form action="{{ route('{{class}}.destroy', ${{classSingle}}->id) }}"
+                        <form action="{{ route('{{prefix}}{{class}}.destroy', ${{classSingle}}->id) }}"
                             method="POST"
                             style="display: inline;"
                             onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
@@ -51,7 +51,7 @@
                 </tbody>
             </table>
 
-            <a class="btn btn-success" href="{{ route('{{class}}.create') }}">Create</a>
+            <a class="btn btn-success" href="{{ route('{{prefix}}{{class}}.create') }}">Create</a>
         </div>
     </div>
 

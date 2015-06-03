@@ -19,9 +19,9 @@
 
 
 
-            <a class="btn btn-default" href="{{ route('{{class}}.index') }}">Back</a>
-            <a class="btn btn-warning" href="{{ route('{{class}}.edit', ${{classSingle}}->id) }}">Edit</a>
-            <form action="{{ route('{{class}}.destroy', ${{classSingle}}->id) }}"
+            <a class="btn btn-default" href="{{ route('{{prefix}}{{class}}.index') }}">Back</a>
+            <a class="btn btn-warning" href="{{ route('{{prefix}}{{class}}.edit', ${{classSingle}}->id) }}">Edit</a>
+            <form action="{{ route('{{prefix}}{{class}}.destroy', ${{classSingle}}->id) }}"
                 method="POST"
                 style="display: inline;"
                 onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">

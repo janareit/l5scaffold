@@ -1,8 +1,6 @@
 # Laravel 5 Scaffold Generator
 
-
-Hi, this is a scaffold generator for Laravel 5.0.x.
-
+This is a scaffold generator for Laravel 5.0.x.
 
 
 ## Usage

@@ -42,6 +42,14 @@ class ScaffoldMakeCommand extends Command
      */
     protected $meta;
 
+
+    /**
+     * Prefix for generators
+     *
+     * @var string
+     */
+    public $prefix;
+
     /**
      * @var Composer
      */
@@ -90,6 +98,8 @@ class ScaffoldMakeCommand extends Command
         $this->meta['action'] = 'create';
         $this->meta['var_name'] = $this->getObjName("name");
         $this->meta['table'] = $this->getObjName("names"); // Store table name
+
+        $this->prefix = $this->option('prefix');
 
         // Generate files
         $this->makeMigration();
@@ -153,6 +163,7 @@ class ScaffoldMakeCommand extends Command
     {
         return [
             ['schema', 's', InputOption::VALUE_REQUIRED, 'Schema to generate scaffold files. (Ex: --schema="nome:title")', null],
+            ['prefix', 'p', InputOption::VALUE_OPTIONAL, 'Prefix for generated file locations. (Ex: --prefix=admin)', null],
         ];
     }
 

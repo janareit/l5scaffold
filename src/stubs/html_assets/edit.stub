@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12">
 
-            <form action="{{ route('{{class}}.update', ${{classSingle}}->id) }}" method="POST">
+            <form action="{{ route('{{prefix}}{{class}}.update', ${{classSingle}}->id) }}" method="POST">
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -21,7 +21,7 @@
 
 
 
-            <a class="btn btn-default" href="{{ route('{{class}}.index') }}">Back</a>
+            <a class="btn btn-default" href="{{ route('{{prefix}}{{class}}.index') }}">Back</a>
             <button class="btn btn-primary" type="submit" >Save</button>
             </form>
         </div>

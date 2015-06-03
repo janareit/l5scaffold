@@ -95,8 +95,10 @@ class MakeController
      */
     private function replaceModelPath(&$stub)
     {
-
-        $model_name = $this->getAppNamespace() . $this->scaffoldCommandObj->getObjName('Name');
+        $model_name = $this->getAppNamespace()
+            . str_replace('/', '\\', config('scaffold.models_command_path'))
+            . str_replace('/', '\\', $this->getPrefix('model'))
+            . $this->scaffoldCommandObj->getObjName('Name');
         $stub = str_replace('{{model_path}}', $model_name, $stub);
 
         return $this;
@@ -109,10 +111,12 @@ class MakeController
         $model_name_uc = $this->scaffoldCommandObj->getObjName('Name');
         $model_name = $this->scaffoldCommandObj->getObjName('name');
         $model_names = $this->scaffoldCommandObj->getObjName('names');
+        $prefix = strtolower( str_replace('/', '.', $this->getPrefix('model')) );
 
         $stub = str_replace('{{model_name_class}}', $model_name_uc, $stub);
         $stub = str_replace('{{model_name_var_sgl}}', $model_name, $stub);
         $stub = str_replace('{{model_name_var}}', $model_names, $stub);
+        $stub = str_replace('{{model_prefix}}', $prefix, $stub);
 
         return $this;
     }

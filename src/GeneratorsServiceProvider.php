@@ -13,8 +13,7 @@ class GeneratorsServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
-
+        $this->publishes([__DIR__ . '/config/scaffold.php' => config_path('scaffold.php')]);
 	}
 
 	/**
@@ -24,7 +23,7 @@ class GeneratorsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-
+        $this->mergeConfigFrom(__DIR__ . '/config/scaffold.php', 'scaffold');
 		$this->registerScaffoldGenerator();
 
 	}
