@@ -112,11 +112,13 @@ class MakeController
         $model_name = $this->scaffoldCommandObj->getObjName('name');
         $model_names = $this->scaffoldCommandObj->getObjName('names');
         $prefix = strtolower( str_replace('/', '.', $this->getPrefix('model')) );
+        $clean_prefix = str_replace('/', '', $this->getPrefix('model'));
 
         $stub = str_replace('{{model_name_class}}', $model_name_uc, $stub);
         $stub = str_replace('{{model_name_var_sgl}}', $model_name, $stub);
         $stub = str_replace('{{model_name_var}}', $model_names, $stub);
         $stub = str_replace('{{model_prefix}}', $prefix, $stub);
+        $stub = str_replace('{{clean_prefix}}', $clean_prefix, $stub);
 
         return $this;
     }
