@@ -2,6 +2,8 @@
 
 This is a scaffold generator for Laravel 5.0.x.
 
+This generator has less advanced features than my other forked generators set at https://github.com/janareit/laravel5generators. Check out both of them to see whic one better suits your project needs.
+
 
 ## Usage
 
